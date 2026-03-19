@@ -14,8 +14,8 @@ h1 {
     color: #333333;
     font-size: 2em;
     margin: 0;
-    margin-top: 10px;
     padding: 0;
+    padding-top: 10px;
     text-align: center;
     letter-spacing: 4px;
 }
@@ -27,7 +27,7 @@ header p {
     margin-top: 10px;
 }
 
-ul {
+nav ul {
     list-style-type: none;
     padding: 0;
     display: flex;
@@ -42,6 +42,10 @@ nav ul li a {
     font-size: 1em;
 }
 
+header, main, nav, footer {
+    padding: 0 10px;
+}
+
 nav {
     background-color: #f8f8f8;
     padding: 1px 0;
@@ -51,7 +55,6 @@ nav {
 
 main p {
     line-height: 1.6rem;
-    padding: 0 10px;
     margin: 0;
     margin-bottom: 15px;
     text-align: left;
@@ -73,4 +76,8 @@ h2 {
 
 nav ul li a.active {
   color: rgb(197, 9, 9);
+}
+
+main li {
+    line-height: 1.5rem;
 }
