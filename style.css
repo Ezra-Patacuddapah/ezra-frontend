@@ -117,6 +117,7 @@ form button {
     color: white;
     border: none;
     cursor: pointer;
+    font-size: inherit;
 }
 
 footer {
@@ -124,4 +125,42 @@ footer {
     padding: 1px 0;
     background-color: #f8f8f8;
     color: #666666;
+}
+
+.icon-list {
+  list-style: none; /* Removes default bullets */
+  padding: 0;        /* Removes default padding */
+  margin: 0;         /* Removes default margin */
+}
+
+.icon-list li {
+  position: relative;
+  padding-left: 30px; /* Space for the icon */
+  margin: 0 0 10px 0; /* Adjusts spacing between items */
+}
+
+.icon-list li::before {
+  content: "★"; /* Use a Unicode character or emoji */
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%); /* Vertically centers the icon */
+  color: #ff5733;              /* Icon color */
+  font-size: 1.2em;            /* Icon size */
+}
+
+.icon-list #email::before  {
+    content: "✉️"; /* Email icon */
+}
+
+.icon-list #linkedin::before {
+    content: "💼"; /* LinkedIn icon */
+}
+
+.icon-list #github::before {
+    content: "💻"; /* GitHub icon */
+}
+
+.icon-list #phone::before {
+    content: "📞"; /* Phone icon */
 }
