@@ -15,7 +15,7 @@ h1 {
     font-size: 2em;
     margin: 0;
     padding: 0;
-    padding-top: 10px;
+    padding-top: 12px;
     text-align: center;
     letter-spacing: 4px;
 }
@@ -24,7 +24,8 @@ header p {
     font-size: 1.2em;
     color: #666666;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 2px;
+    margin-bottom: 8px;
 }
 
 nav ul {
@@ -54,7 +55,8 @@ nav {
 }
 
 main p {
-    line-height: 1.6rem;
+    line-height: 1.4rem;
+    letter-spacing: 0.02em;
     margin: 0;
     margin-bottom: 15px;
     text-align: left;
@@ -74,6 +76,17 @@ h2 {
     margin: 20px 0 15px 0;
 }
 
+h3 {
+    font-family: 'Arial', sans-serif;
+    color: #333333;
+    margin: 15px 0 10px 30px;
+}
+
+h3 + ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
 nav ul li a.active {
   color: rgb(197, 9, 9);
 }
@@ -85,9 +98,15 @@ main li {
 #contact {
     background-color: #ffffff;
     padding: 20px;
+    padding-bottom: 5px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-bottom: 10px;
+}
+
+#contact a {
+    color: #007BFF;
+    text-decoration: none;
 }
 
 #contact h2 {
