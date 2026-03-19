@@ -43,3 +43,6 @@ window.addEventListener('hashchange', setActiveFromHash);
 
 // Update on scroll
 window.addEventListener('scroll', setActiveFromScroll);
+
+// Set the current year in the footer
+document.getElementById('year').textContent = new Date().getFullYear();

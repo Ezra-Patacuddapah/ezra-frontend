@@ -81,3 +81,47 @@ nav ul li a.active {
 main li {
     line-height: 1.5rem;
 }
+
+#contact {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+#contact h2 {
+    margin-top: 0;
+}
+
+#contact p {
+    margin: 0 0 15px 0;
+    text-indent: 0;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input, form textarea, button {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+form button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    padding: 1px 0;
+    background-color: #f8f8f8;
+    color: #666666;
+}
