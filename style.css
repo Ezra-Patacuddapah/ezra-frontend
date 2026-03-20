@@ -37,7 +37,7 @@ nav ul {
     gap: 25px;
 }
 
-nav ul li a {
+nav ul li a, #projects a {
     text-decoration: none;
     color: #007BFF;
     font-family: 'Arial', sans-serif;
@@ -189,4 +189,23 @@ footer {
 
 .icon-list #phone::before {
     content: "📞"; /* Phone icon */
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #dddddd;
+    margin: 20px 0;
+}
+
+a[target="_blank"]::after {
+  /* content: url(/images/new-tab.png); Unicode for an arrow pointing top-right */
+  /* margin-left: 0.3em; */
+  /* Additional styling as needed */
+  /* font-size: 10px; */
+  /* position: absolute; */
+  /* margin: 0 3px 0 5px;
+  display: inline-block;
+    width: 20px;  /* Control width */
+    /* height: 20px; Control height */
+    /* object-fit: contain; Scale image to fit */ 
 }
