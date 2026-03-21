@@ -46,3 +46,36 @@ window.addEventListener('scroll', setActiveFromScroll);
 
 // Set the current year in the footer
 document.getElementById('year').textContent = new Date().getFullYear();
+
+const elementsToTranslate = document.querySelectorAll('[data-lang]');
+
+// Function to fetch the correct JSON file and apply translations
+async function loadLanguage(lang) {
+    const response = await fetch(`./languages/${lang}.json`);
+    const translations = await response.json();
+    applyTranslations(translations);
+    // Update the HTML lang attribute for accessibility/SEO
+    document.documentElement.setAttribute('lang', lang);
+}
+
+// Function to apply translations to the page elements
+function applyTranslations(translations) {
+    elementsToTranslate.forEach(element => {
+        const key = element.getAttribute('data-lang');
+        if (translations[key]) {
+            element.textContent = translations[key];
+        }
+    });
+}
+
+// Function to set the language, save to localStorage, and load translations
+function setLanguage(lang) {
+    localStorage.setItem('selectedLanguage', lang);
+    loadLanguage(lang);
+}
+
+// Load the saved language preference on page load
+window.onload = () => {
+    const savedLanguage = localStorage.getItem('selectedLanguage') || 'en'; // Default to English if none saved
+    loadLanguage(savedLanguage);
+};

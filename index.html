@@ -8,46 +8,49 @@
       name="description"
       content="Ezra's personal website showcasing his work as a frontend developer."
     />
-    <title>Ezra Frontend Developer</title>
+    <title data-i18n="title">Ezra Frontend Developer</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
   </head>
   <body>
     <header id="home">
-      <h1>Ezra</h1>
-      <p>Frontend Developer</p>
+      <h1 data-lang="heading">Ezra</h1>
+      <p data-lang="title">Frontend Developer</p>
+      <div class="language-switcher">
+        <button onclick="setLanguage('en')">English</button>
+        <button onclick="setLanguage('ru')">Русский</button>
+    </div>
     </header>
     <nav>
       <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#home" data-lang="home">Home</a></li>
+        <li><a href="#about" data-lang="about">About</a></li>
+        <li><a href="#projects" data-lang="projects">Projects</a></li>
+        <li><a href="#contact" data-lang="contact">Contact</a></li>
       </ul>
     </nav>
     <main>
       <section id="about">
-        <h2>About</h2>
+        <h2 data-lang="about">About</h2>
         <div class="face-crop">
             <img src="/images/profile.jpeg" alt="Ezra Profile Picture" class="profile-pic" />
         </div>
 
-        <p>Hello, my name is <strong>Ezra</strong>. I live in <em>Moscow, Russia</em>. 
-            My core stack is <em>React, TypeScript, Tailwind CSS and Next.js</em>.
-            I speak</p>
-        <h3>Languages:</h3>
+        <p><span data-lang="about_one">Hello, my name is </span><strong data-lang="heading">Ezra</strong>. <span data-lang="about_two">I live in </span><em data-lang="place">Moscow, Russia</em>. 
+            <span data-lang="about_four">I speak</span></p>
+        <h3 data-lang="languages">Languages:</h3>
         <ul>
-            <li>Russian</li>
-            <li>English</li>
-            <li>Telugu</li>
+            <li data-lang="russian">Russian</li>
+            <li data-lang="english">English</li>
+            <li data-lang="telugu">Telugu</li>
         </ul>
         
-        <p>
+        <p data-lang="about_five">
           I create
           responsive and user-friendly web applications. I use
         </p>
-        <h3>Technologies:</h3>
+        <h3 data-lang="technologies">Technologies:</h3>
         <ul>
             <li>HTML</li>
             <li>CSS</li>
@@ -59,28 +62,28 @@
             <li>Tailwind CSS</li>
             <li>Next.js</li>
         </ul>
-        <h3>Other Skills</h3>
+        <h3 data-lang="other_skills">Other Skills</h3>
         <ul>
-            <li>Basic computer knowledge</li>
-            <li>Designing the web applications</li>
-            <li>Web research and information retrieval</li>
-            <li>Data entry</li>
+            <li data-lang="other_skills_one">Basic computer knowledge</li>
+            <li data-lang="other_skills_two">Designing the web applications</li>
+            <li data-lang="other_skills_three">Web research and information retrieval</li>
+            <li data-lang="other_skills_four">Data entry</li>
         </ul>
       </section>
       <section id="projects">
-        <h2>Projects</h2>
-        <p>Here are some of the projects I have researched on and built§:</p>
+        <h2 data-lang="projects">Projects</h2>
+        <p data-lang="projects_description">Here are some of the projects I have researched on and built</p>
         <dl>
             <dt>Project <a href="https://etext.vercel.app/" target="_blank" rel="noopener noreferrer">eText</a></dt>
-            <dd>A web application built with React, TypeScript, Tailwind CSS and Next.js.</dd>
-            
+            <dd data-lang="project_etext">A web application built with React, TypeScript, Tailwind CSS and Next.js.</dd>
+
             <dt>Project <a href="https://model-ui.vercel.app/" target="_blank" rel="noopener noreferrer">Model UI</a></dt>
-            <dd>A web site for displaying and interacting with HTML, CSS and JavaScript.</dd>
+            <dd data-lang="project_model_ui">A web site for displaying and interacting with HTML, CSS and JavaScript.</dd>
         </dl>
       </section>
       <section id="contact">
-        <h2>Contact</h2>
-        <p>Feel free to reach out to me at </p>
+        <h2 data-lang="contact">Contact</h2>
+        <p data-lang="contact_one">Feel free to reach out to me at</p>
           <ul class="icon-list">
             <li id="email"><a href="mailto:ezrapatacuddapah@google.com" target="_blank" rel="noopener noreferrer">ezrapatacuddapah@google.com</a></li>
             <li id="linkedin"><a href="https://www.linkedin.com/in/ezra-patacuddapah-11b194363/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
@@ -88,22 +91,22 @@
             <li id="phone"><a href="tel:+79778667419" target="_blank" rel="noopener noreferrer">+7 (977) 866-74-19</a></li>
           </ul>
         <hr />
-        <p>
+        <p data-lang="contact_two">
           Or you can send me a message.
         </p>
         <form id="contact-form">
-            <label for="name">Name:</label><br />
+            <label for="name" data-lang="name">Name:</label><br />
             <input type="text" id="name" name="name" required /><br />
-            <label for="email">Email:</label><br />
+            <label for="email" data-lang="email">Email:</label><br />
             <input type="email" id="email" name="email" required /><br />
-            <label for="message">Message:</label><br />
+            <label for="message" data-lang="message">Message:</label><br />
             <textarea id="message" name="message" rows="4" required></textarea><br />
-            <button type="submit">Send</button>
+            <button type="submit" data-lang="send">Send</button>
         </form>
       </section>
     </main>
     <footer>
-      <p>&copy; <span id="year"></span> Ezra's Portfolio. All rights reserved.</p>
+      <p>&copy; <span id="year"></span> <span data-lang="footer_copyright">Ezra's Portfolio. All rights reserved.</span></p>
     </footer>
   </body>
 </html>

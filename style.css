@@ -83,10 +83,18 @@ h2 {
     margin: 25px 0 10px 0;
 }
 
+h2 + p::after {
+    content: ":";
+}
+
 h3 {
     font-family: 'Arial', sans-serif;
     color: #333333;
     margin: 15px 0 10px 30px;
+}
+
+h3::after {
+    content: ":";
 }
 
 h3 + ul {
