@@ -69,13 +69,32 @@ function applyTranslations(translations) {
 }
 
 // Function to set the language, save to localStorage, and load translations
-function setLanguage(lang) {
-    localStorage.setItem('selectedLanguage', lang);
-    loadLanguage(lang);
-}
+// function setLanguage(lang) {
+//     localStorage.setItem('selectedLanguage', lang);
+//     loadLanguage(lang);
+// }
 
 // Load the saved language preference on page load
 window.onload = () => {
     const savedLanguage = localStorage.getItem('selectedLanguage') || 'en'; // Default to English if none saved
     loadLanguage(savedLanguage);
 };
+
+const btn = document.getElementById('lang-btn');
+// const elements = document.querySelectorAll('.lang-content');
+let currentLang = 'en';
+
+btn.addEventListener('click', () => {
+    // 1. Swap the language variable
+    currentLang = currentLang === 'en' ? 'ru' : 'en';
+
+    // 2. Update the button label to show the OTHER option
+    btn.textContent = currentLang === 'en' ? 'Ру' : 'En';
+
+    // 3. Update all text on the page
+    // elements.forEach(el => {
+    //     el.textContent = el.getAttribute(`data-${currentLang}`);
+    // });
+    localStorage.setItem('selectedLanguage', currentLang);
+    loadLanguage(currentLang);
+});

@@ -6,8 +6,22 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f0f0f0;
-    font-family: 'Arial', sans-serif;
-    color: #333333;}
+    font-family: "Arial", sans-serif;
+    color: #333333;
+}
+
+header,
+main,
+nav,
+footer {
+    padding: 0 10px;
+}
+
+header {
+    background-color: #ffffff;
+    padding: 10px;
+    position: relative;
+}
 
 h1 {
     text-transform: uppercase;
@@ -20,7 +34,6 @@ h1 {
     letter-spacing: 4px;
 }
 
-
 header p {
     font-size: 1.2em;
     color: #666666;
@@ -28,6 +41,36 @@ header p {
     margin-top: 2px;
     margin-bottom: 8px;
 }
+
+#lang-btn {
+    font-weight: bold;
+    background: rgb(171, 45, 45);
+    color: #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+}
+
+#lang-btn {
+    font-weight: bold;
+    background: rgb(171, 45, 45);
+    color: #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    top: 7px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 nav ul {
     list-style-type: none;
@@ -37,21 +80,14 @@ nav ul {
     gap: 25px;
 }
 
-nav ul li a, #projects a {
+nav ul li a,
+#projects a {
     text-decoration: none;
-    color: #007BFF;
-    font-family: 'Arial', sans-serif;
+    color: #007bff;
+    font-family: "Arial", sans-serif;
     font-size: 1em;
 }
 
-header, main, nav, footer {
-    padding: 0 10px;
-}
-
-header {
-    background-color: #ffffff;
-    padding: 10px;
-}
 
 nav {
     background-color: #f8f8f8;
@@ -76,19 +112,19 @@ section {
 }
 
 h2 {
-    font-family: 'Arial', sans-serif;
+    font-family: "Arial", sans-serif;
     color: #333333;
     text-align: center;
     padding: 0;
     margin: 25px 0 10px 0;
 }
 
-h2 + p::after {
+h2+p::after {
     content: ":";
 }
 
 h3 {
-    font-family: 'Arial', sans-serif;
+    font-family: "Arial", sans-serif;
     color: #333333;
     margin: 15px 0 10px 30px;
 }
@@ -97,28 +133,30 @@ h3::after {
     content: ":";
 }
 
-h3 + ul {
+h3+ul {
     list-style-type: disc;
     margin-left: 20px;
 }
 
 nav ul li a.active {
-  color: rgb(197, 9, 9);
+    color: rgb(197, 9, 9);
 }
 
-main li, main dd {
+main li,
+main dd {
     line-height: 1.5rem;
 }
 
-dl {
-    /* margin-left: 30px; */
-}
+/* dl {
+    margin-left: 30px;
+} */
 
 dl dt {
     font-weight: bold;
     margin-top: 15px;
     margin-bottom: 7px;
 }
+
 dl dd {
     margin-left: 30px;
     margin-bottom: 10px;
@@ -138,7 +176,7 @@ dl dd::before {
 }
 
 #contact a {
-    color: #007BFF;
+    color: #007bff;
     text-decoration: none;
 }
 
@@ -155,7 +193,9 @@ form label {
     font-weight: bold;
 }
 
-form input, form textarea, button {
+form input,
+form textarea,
+button {
     width: 100%;
     padding: 8px;
     margin: 5px 0 15px 0;
@@ -165,7 +205,7 @@ form input, form textarea, button {
 }
 
 form button {
-    background-color: #007BFF;
+    background-color: #007bff;
     color: white;
     border: none;
     cursor: pointer;
@@ -180,41 +220,54 @@ footer {
 }
 
 .icon-list {
-  list-style: none; /* Removes default bullets */
-  padding: 0;        /* Removes default padding */
-  margin: 0;         /* Removes default margin */
+    list-style: none;
+    /* Removes default bullets */
+    padding: 0;
+    /* Removes default padding */
+    margin: 0;
+    /* Removes default margin */
 }
 
 .icon-list li {
-  position: relative;
-  padding-left: 30px; /* Space for the icon */
-  margin: 0 0 10px 0; /* Adjusts spacing between items */
+    position: relative;
+    padding-left: 30px;
+    /* Space for the icon */
+    margin: 0 0 10px 0;
+    /* Adjusts spacing between items */
 }
 
 .icon-list li::before {
-  content: "★"; /* Use a Unicode character or emoji */
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%); /* Vertically centers the icon */
-  color: #ff5733;              /* Icon color */
-  font-size: 1.2em;            /* Icon size */
+    content: "★";
+    /* Use a Unicode character or emoji */
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    /* Vertically centers the icon */
+    color: #ff5733;
+    /* Icon color */
+    font-size: 1.2em;
+    /* Icon size */
 }
 
-.icon-list #email::before  {
-    content: "✉️"; /* Email icon */
+.icon-list #email::before {
+    content: "✉️";
+    /* Email icon */
 }
 
 .icon-list #linkedin::before {
-    content: "💼"; /* LinkedIn icon */
+    content: "💼";
+    /* LinkedIn icon */
 }
 
 .icon-list #github::before {
-    content: "💻"; /* GitHub icon */
+    content: "💻";
+    /* GitHub icon */
 }
 
 .icon-list #phone::before {
-    content: "📞"; /* Phone icon */
+    content: "📞";
+    /* Phone icon */
 }
 
 hr {
@@ -224,21 +277,26 @@ hr {
 }
 
 .face-crop {
-  width: 100px; /* Desired width */
-  height: 100px; /* Desired height */
-  overflow: hidden; /* Hides the outside parts */
-  border-radius: 50%; /* Optional: Makes it a circle */
-  margin: auto;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-  margin-bottom: 10px;
+    width: 100px;
+    /* Desired width */
+    height: 100px;
+    /* Desired height */
+    overflow: hidden;
+    /* Hides the outside parts */
+    border-radius: 50%;
+    /* Optional: Makes it a circle */
+    margin: auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    margin-bottom: 10px;
 }
 
 .face-crop img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Crops image to fit container */
-    object-position: 10px 17px; /* Adjust if face isn't centered (e.g., 'top', '20% 30%') */
-    transform: scale(2.1); /* Optional: Zooms in on the face */
+    object-fit: cover;
+    /* Crops image to fit container */
+    object-position: 10px 17px;
+    /* Adjust if face isn't centered (e.g., 'top', '20% 30%') */
+    transform: scale(2.1);
+    /* Optional: Zooms in on the face */
 }
-
-
