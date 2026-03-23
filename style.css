@@ -55,29 +55,102 @@ header p {
     font-size: 12px;
 }
 
-#lang-btn {
+#lang-btn, #theme-btn {
     font-weight: bold;
     background: rgb(171, 45, 45);
     color: #ffffff;
     border-radius: 50%;
     position: absolute;
     top: 7px;
-    right: 10px;
     width: 30px;
     height: 30px;
     font-size: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 1px solid rgba(255,255,255,.2);
+    cursor: pointer;
 }
 
+#lang-btn {
+    right: 10px;
+}
+
+#theme-btn {
+    right: 50px;
+}
+
+body, header, nav, main, footer, button, input, textarea, .face-crop {
+    transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+body.dark {
+    background-color: #121212;
+    color: #e1e1e1;
+}
+
+body.dark header {
+    background-color: #1f1f1f;
+}
+
+body.dark nav {
+    background-color: #181818;
+}
+
+body.dark nav ul li a,
+body.dark #projects a,
+body.dark #contact a {
+    color: #81a9ff;
+}
+
+body.dark nav ul li a.active {
+    color: #ff8f8f;
+}
+
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark p,
+body.dark li,
+body.dark dt,
+body.dark dd,
+body.dark form label,
+body.dark footer {
+    color: #e1e1e1;
+}
+
+body.dark #contact {
+    background-color: #1a1a1a;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+body.dark form input,
+body.dark form textarea,
+body.dark form button {
+    background-color: #282828;
+    border: 1px solid #444;
+    color: #eee;
+}
+
+body.dark form button {
+    background-color: #2f72ff;
+}
+
+body.dark footer {
+    background-color: #181818;
+    color: #aaa;
+}
+
+#lang-btn:hover,
+#theme-btn:hover {
+    transform: scale(1.05);
+}
 
 nav ul {
     list-style-type: none;
     padding: 0;
     display: flex;
     justify-content: center;
-    gap: 25px;
 }
 
 nav ul li a,
@@ -87,7 +160,6 @@ nav ul li a,
     font-family: "Arial", sans-serif;
     font-size: 1em;
 }
-
 
 nav {
     background-color: #f8f8f8;
@@ -119,7 +191,7 @@ h2 {
     margin: 25px 0 10px 0;
 }
 
-h2+p::after {
+#projects+p::after {
     content: ":";
 }
 

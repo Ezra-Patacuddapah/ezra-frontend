@@ -47,6 +47,36 @@ window.addEventListener('scroll', setActiveFromScroll);
 // Set the current year in the footer
 document.getElementById('year').textContent = new Date().getFullYear();
 
+// Theme selector
+const themeButton = document.getElementById('theme-btn');
+const body = document.body;
+
+function applyTheme(theme) {
+    if (theme === 'dark') {
+        body.classList.add('dark');
+        themeButton.textContent = '☀️';
+        themeButton.setAttribute('aria-label', 'Switch to light mode');
+    } else {
+        body.classList.remove('dark');
+        themeButton.textContent = '🌙';
+        themeButton.setAttribute('aria-label', 'Switch to dark mode');
+    }
+    localStorage.setItem('theme', theme);
+}
+
+function initTheme() {
+    const savedTheme = localStorage.getItem('theme');
+    const preferred = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    applyTheme(savedTheme || preferred);
+}
+
+themeButton?.addEventListener('click', () => {
+    const newTheme = body.classList.contains('dark') ? 'light' : 'dark';
+    applyTheme(newTheme);
+});
+
+initTheme();
+
 const elementsToTranslate = document.querySelectorAll('[data-lang]');
 
 // Function to fetch the correct JSON file and apply translations
@@ -68,33 +98,25 @@ function applyTranslations(translations) {
     });
 }
 
-// Function to set the language, save to localStorage, and load translations
-// function setLanguage(lang) {
-//     localStorage.setItem('selectedLanguage', lang);
-//     loadLanguage(lang);
-// }
-
-// Load the saved language preference on page load
-window.onload = () => {
-    const savedLanguage = localStorage.getItem('selectedLanguage') || 'en'; // Default to English if none saved
-    loadLanguage(savedLanguage);
-};
-
 const btn = document.getElementById('lang-btn');
-// const elements = document.querySelectorAll('.lang-content');
+const navUl = document.querySelector('nav ul');
+
 let currentLang = 'en';
 
-btn.addEventListener('click', () => {
-    // 1. Swap the language variable
-    currentLang = currentLang === 'en' ? 'ru' : 'en';
-
-    // 2. Update the button label to show the OTHER option
+function applyLanguage(lang) {
+    currentLang = lang;
+    navUl.style.gap = currentLang === 'ru' ? '16px' : '25px';
     btn.textContent = currentLang === 'en' ? 'Ру' : 'En';
-
-    // 3. Update all text on the page
-    // elements.forEach(el => {
-    //     el.textContent = el.getAttribute(`data-${currentLang}`);
-    // });
     localStorage.setItem('selectedLanguage', currentLang);
     loadLanguage(currentLang);
+}
+
+window.onload = () => {
+    const savedLanguage = localStorage.getItem('selectedLanguage') || 'en'; // Default to English if none saved
+    applyLanguage(savedLanguage);
+};
+
+btn.addEventListener('click', () => {
+    const nextLang = currentLang === 'en' ? 'ru' : 'en';
+    applyLanguage(nextLang);
 });
