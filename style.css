@@ -82,9 +82,9 @@ header p {
 } */
 
 .preference {
-    position: absolute;
+    /* position: absolute; */
     top: 10px;
-    right: 20%;
+    right: 10px;
     /* display: flex; */
     /* gap: 10px; */
 }
@@ -412,6 +412,10 @@ dd {
         grid-area: header;
         /* grid-column: 2 / -1;
         grid-row: 1 / 2; */
+    }
+
+    .preference {
+        right: 10%;
     }
 
     nav {
