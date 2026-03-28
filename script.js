@@ -105,7 +105,8 @@ let currentLang = 'en';
 
 function applyLanguage(lang) {
     currentLang = lang;
-    navUl.style.gap = currentLang === 'ru' ? '16px' : '25px';
+    // if (window.length > 0) {
+    // navUl.style.gap = currentLang === 'ru' ? '16px' : '25px';
     btn.textContent = currentLang === 'en' ? 'Ру' : 'En';
     localStorage.setItem('selectedLanguage', currentLang);
     loadLanguage(currentLang);

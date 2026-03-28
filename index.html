@@ -17,8 +17,10 @@
     <header id="home">
       <h1 data-lang="heading">Ezra</h1>
       <p data-lang="title">Frontend Developer</p>
-      <button id="lang-btn" aria-label="Toggle language">Ру</button>
-      <button id="theme-btn" aria-label="Toggle light and dark mode">🌙</button>
+      <div class="preference">
+        <button id="theme-btn" aria-label="Toggle light and dark mode">🌙</button>
+        <button id="lang-btn" aria-label="Toggle language">Ру</button>
+      </div>
     </header>
     <nav>
       <ul>
@@ -32,79 +34,142 @@
       <section id="about">
         <h2 data-lang="about">About</h2>
         <div class="face-crop">
-            <img src="/images/profile.jpeg" alt="Ezra Profile Picture" class="profile-pic" />
+          <img
+            src="/images/profile.jpeg"
+            alt="Ezra Profile Picture"
+            class="profile-pic"
+          />
         </div>
 
-        <p><span data-lang="about_one">Hello, my name is </span><strong data-lang="heading">Ezra</strong>. <span data-lang="about_two">I live in </span><em data-lang="place">Moscow, Russia</em>. 
-            <span data-lang="about_four">I speak</span></p>
+        <p>
+          <span data-lang="about_one">Hello, my name is </span
+          ><strong data-lang="heading">Ezra</strong>.
+          <span data-lang="about_two">I live in </span
+          ><em data-lang="place">Moscow, Russia</em>.
+          <span data-lang="about_four">I speak</span>
+        </p>
         <h3 data-lang="languages">Languages:</h3>
         <ul>
-            <li data-lang="russian">Russian</li>
-            <li data-lang="english">English</li>
-            <li data-lang="telugu">Telugu</li>
+          <li data-lang="russian">Russian</li>
+          <li data-lang="english">English</li>
+          <li data-lang="telugu">Telugu</li>
         </ul>
-        
+
         <p data-lang="about_five">
-          I create
-          responsive and user-friendly web applications. I use
+          I create responsive and user-friendly web applications. I use
         </p>
         <h3 data-lang="technologies">Technologies:</h3>
         <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>Git</li>
-            <li>GitHub</li>
-            <li>React</li>
-            <li>TypeScript</li>
-            <li>Tailwind CSS</li>
-            <li>Next.js</li>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>Git</li>
+          <li>GitHub</li>
+          <li>React</li>
+          <li>TypeScript</li>
+          <li>Tailwind CSS</li>
+          <li>Next.js</li>
         </ul>
         <h3 data-lang="other_skills">Other Skills</h3>
         <ul>
-            <li data-lang="other_skills_one">Basic computer knowledge</li>
-            <li data-lang="other_skills_two">Designing the web applications</li>
-            <li data-lang="other_skills_three">Web research and information retrieval</li>
-            <li data-lang="other_skills_four">Data entry</li>
+          <li data-lang="other_skills_one">Basic computer knowledge</li>
+          <li data-lang="other_skills_two">Designing the web applications</li>
+          <li data-lang="other_skills_three">
+            Web research and information retrieval
+          </li>
+          <li data-lang="other_skills_four">Data entry</li>
         </ul>
       </section>
       <section id="projects">
         <h2 data-lang="projects">Projects</h2>
-        <p data-lang="projects_description">Here are some of the projects I have researched on and built</p>
+        <p data-lang="projects_description">
+          Here are some of the projects I have researched on and built
+        </p>
         <dl>
-            <dt>Project <a href="https://etext.vercel.app/" target="_blank" rel="noopener noreferrer">eText</a></dt>
-            <dd data-lang="project_etext">A web application built with React, TypeScript, Tailwind CSS and Next.js.</dd>
+          <dt>
+            Project
+            <a
+              href="https://etext.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >eText</a
+            >
+          </dt>
+          <dd data-lang="project_etext">
+            A web application built with React, TypeScript, Tailwind CSS and
+            Next.js.
+          </dd>
 
-            <dt>Project <a href="https://model-ui.vercel.app/" target="_blank" rel="noopener noreferrer">Model UI</a></dt>
-            <dd data-lang="project_model_ui">A web site for displaying and interacting with HTML, CSS and JavaScript.</dd>
+          <dt>
+            Project
+            <a
+              href="https://model-ui.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Model UI</a
+            >
+          </dt>
+          <dd data-lang="project_model_ui">
+            A web site for displaying and interacting with HTML, CSS and
+            JavaScript.
+          </dd>
         </dl>
       </section>
       <section id="contact">
         <h2 data-lang="contact">Contact</h2>
         <p data-lang="contact_one">Feel free to reach out to me at</p>
-          <ul class="icon-list">
-            <li id="email"><a href="mailto:ezrapatacuddapah@google.com" target="_blank" rel="noopener noreferrer">ezrapatacuddapah@google.com</a></li>
-            <li id="linkedin"><a href="https://www.linkedin.com/in/ezra-patacuddapah-11b194363/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-            <li id="github"><a href="https://github.com/Ezra-Patacuddapah" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-            <li id="phone"><a href="tel:+79778667419" target="_blank" rel="noopener noreferrer">+7 (977) 866-74-19</a></li>
-          </ul>
+        <ul class="icon-list">
+          <li id="email">
+            <a
+              href="mailto:ezrapatacuddapah@google.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              >ezrapatacuddapah@google.com</a
+            >
+          </li>
+          <li id="linkedin">
+            <a
+              href="https://www.linkedin.com/in/ezra-patacuddapah-11b194363/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >LinkedIn</a
+            >
+          </li>
+          <li id="github">
+            <a
+              href="https://github.com/Ezra-Patacuddapah"
+              target="_blank"
+              rel="noopener noreferrer"
+              >GitHub</a
+            >
+          </li>
+          <li id="phone">
+            <a href="tel:+79778667419" target="_blank" rel="noopener noreferrer"
+              >+7 (977) 866-74-19</a
+            >
+          </li>
+        </ul>
         <hr />
-        <p data-lang="contact_two">
-          Or you can send me a message.
-        </p>
+        <p data-lang="contact_two">Or you can send me a message.</p>
         <form id="contact-form">
-            <label for="name" data-lang="name">Name:</label><br />
-            <input type="text" id="name" name="name" required /><br />
-            <label for="email" data-lang="email">Email:</label><br />
-            <input type="email" id="email" name="email" required /><br />
-            <label for="message" data-lang="message">Message:</label><br />
-            <textarea id="message" name="message" rows="4" required></textarea><br />
-            <button type="submit" data-lang="send">Send</button>
+          <label for="name" data-lang="name">Name:</label><br />
+          <input type="text" id="name" name="name" required /><br />
+          <label for="email" data-lang="email">Email:</label><br />
+          <input type="email" id="email" name="email" required /><br />
+          <label for="message" data-lang="message">Message:</label><br />
+          <textarea id="message" name="message" rows="4" required></textarea
+          ><br />
+          <button type="submit" data-lang="send">Send</button>
         </form>
       </section>
     </main>
     <footer>
-      <p>&copy; <span id="year"></span> <span data-lang="footer_copyright">Ezra's Portfolio. All rights reserved.</span></p>
+      <p>
+        &copy; <span id="year"></span>
+        <span data-lang="footer_copyright"
+          >Ezra's Portfolio. All rights reserved.</span
+        >
+      </p>
     </footer>
   </body>
 </html>

@@ -70,14 +70,23 @@ header p {
     justify-content: center;
     border: 1px solid rgba(255,255,255,.2);
     cursor: pointer;
+    z-index: 10000;
 }
 
-#lang-btn {
+/* #lang-btn {
     right: 10px;
 }
 
 #theme-btn {
     right: 50px;
+} */
+
+.preference {
+    position: absolute;
+    top: 10px;
+    right: 20%;
+    /* display: flex; */
+    /* gap: 10px; */
 }
 
 body, header, nav, main, footer, button, input, textarea, .face-crop {
@@ -150,7 +159,7 @@ nav ul {
     list-style-type: none;
     padding: 0;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 nav ul li a,
@@ -372,3 +381,80 @@ hr {
     transform: scale(2.1);
     /* Optional: Zooms in on the face */
 }
+
+dt {
+  padding-left: 30px; /* or a margin property */
+}
+
+dt::after {
+    content: ":";
+}
+
+dd {
+    /* text-indent: 25px; */
+    margin-left: 0;
+    padding-left: 0;
+    margin-bottom: 10px;
+}
+
+@media (min-width: 769px) {
+    body {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas:
+            "nav header"
+            "nav main"
+            "nav footer";
+    }
+
+    header {
+        grid-area: header;
+        /* grid-column: 2 / -1;
+        grid-row: 1 / 2; */
+    }
+
+    nav {
+        grid-area: nav;
+        /* grid-column: 1 / 2;
+        grid-row: 1 / 2; */
+        height: 100vh;
+        position: sticky;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        
+        /* align-items: flex-end; */
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding-top: 120px;
+        padding-left: 50%;
+    }
+
+    main {
+        grid-area: main;
+        /* grid-column: 2 / -1; */
+        padding: 20px;
+    }
+
+    section {
+    scroll-margin-top: 20px;
+    max-width: 1200px;
+    margin: 0 auto 100px auto;
+    margin-bottom: 100px;
+    padding: 0 40px;
+}
+
+    footer {
+        grid-area: footer;
+        /* grid-column: 1 / -1;
+        grid-row: 3 / 4; */
+        text-align: left;
+    }
+
+}   
