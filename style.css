@@ -45,7 +45,7 @@ header p {
 #lang-btn {
     font-weight: bold;
     background: rgb(171, 45, 45);
-    color: #ffffff;
+    /* color: #ffffff; */
     border-radius: 50%;
     position: absolute;
     top: 10px;
@@ -58,7 +58,7 @@ header p {
 #lang-btn, #theme-btn {
     font-weight: bold;
     background: rgb(171, 45, 45);
-    color: #ffffff;
+    color: #fad733;
     border-radius: 50%;
     position: absolute;
     top: 7px;
